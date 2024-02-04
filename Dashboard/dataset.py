@@ -13,7 +13,7 @@ from io import BytesIO
 st.set_page_config(page_title="TRAPAS", page_icon=":hammer_and_pick:",layout="wide")
 
 #Logo UFPR 
-file_path = "C:/Dashboard/Imagens/UFPR.png"
+file_path = "Dashboard/Imagens/UFPR.png"
 ufpr_logo = Image.open(file_path)
 st.image(ufpr_logo)
 
@@ -26,7 +26,7 @@ st.text("")
 st.title('Projeto TRAPAS - Banco de Dados de Sergipe')
 
 df = pd.read_excel(
-    io='C:\Dashboard\Dados\DadosBrutos.xlsx',
+    io='Dashboard/Dados/DadosBrutos.xlsx',
     engine= 'openpyxl',
     sheet_name='Planilha1',
     skiprows= 0,
@@ -90,7 +90,7 @@ if st.sidebar.button('Mapa Divisão Espessura X Número de Camadas de Arenito'):
 
 # Display the second image (Divisao)
 if session_state.get('show_image_divisao'):
-    image_divisao = Image.open(r'C:\Dashboard\Imagens\Divisão.png')
+    image_divisao = Image.open(r'Dashboard/Imagens/Divisão.png')
     st.image(image_divisao)
 
     # Add a button to close the image
@@ -105,7 +105,7 @@ if st.sidebar.button('Show Mapa Image'):
 
 # Display the first image (Mapa)
 if session_state.get('show_image_mapa'):
-    image_mapa = Image.open(r'C:\Dashboard\Imagens\Mapa de Isópacas.png')
+    image_mapa = Image.open(r'Dashboard/Imagens/Mapa de Isópacas.png')
     st.image(image_mapa)
 
     # Add a button to close the image
@@ -247,7 +247,7 @@ with left_column:
 
 # Coluna da Direita
 with right_column:
-    file_path = "C:/Dashboard/Imagens/Imagem_Poligono.png"
+    file_path = "Dashboard/Imagens/Imagem_Poligono.png"
     poligon = Image.open(file_path)
     resized_poligon = poligon.resize((500, 500))
     st.image(resized_poligon)
@@ -308,17 +308,17 @@ st.text("")
 st.text("")
 
 #Logo Petrobras 
-file_path = "C:/Dashboard/Imagens/Petro.jpg"
+file_path = "Dashboard/Imagens/Petro.jpg"
 petrobr_logo = Image.open(file_path)
 resized_petrobr_logo = petrobr_logo.resize((180, 50))
 
 #Logo Labap
-file_path = "C:/Dashboard/Imagens/Arquivos_Finais_Logo_LABAP_COR_H(4).png"
+file_path = "Dashboard/Imagens/Arquivos_Finais_Logo_LABAP_COR_H(4).png"
 labap_logo = Image.open(file_path)
 resized_labap_logo = labap_logo.resize((180, 50))
 
 #Logo Geopost        
-file_path = "C:/Dashboard/Imagens/geopost_logo.png"
+file_path = "Dashboard/Imagens/geopost_logo.png"
 geopost_logo = Image.open(file_path)
 resized_geopost_logo = geopost_logo.resize((180, 60))
 
