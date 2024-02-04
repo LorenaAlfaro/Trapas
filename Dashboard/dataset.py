@@ -98,7 +98,7 @@ if session_state.get('show_image_divisao'):
         session_state.set('show_image_divisao', False)
 
 # Display the image if the button was clicked for Mapa
-if st.sidebar.button('Show Mapa Image'):
+if st.sidebar.button('Mapa Isópacas de Arenito'):
     # Store the state in the session for the first image
     session_state.set('show_image_mapa', True)
     session_state.set('show_image_divisao', False)
